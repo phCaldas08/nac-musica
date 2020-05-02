@@ -2,14 +2,14 @@ package br.com.fiap.model;
 
 public class MusicaModel {
 	
-	private int id;
+	private Integer id;
 	private String nome;
 	private String album;
 	private String artista;
-	private double duracao;
-	private int anoLancamento;
+	private Double duracao;
+	private Integer anoLancamento;
 	
-	public MusicaModel(int id, String nome, String album, String artista, double duracao, int anoLancamento) {
+	public MusicaModel(Integer id, String nome, String album, String artista, Double duracao, Integer anoLancamento) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -19,7 +19,7 @@ public class MusicaModel {
 		this.anoLancamento = anoLancamento;
 	}
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	public void setId(int id) {
@@ -43,13 +43,13 @@ public class MusicaModel {
 	public void setArtista(String artista) {
 		this.artista = artista;
 	}
-	public double getDuracao() {
+	public Double getDuracao() {
 		return duracao;
 	}
 	public void setDuracao(double duracao) {
 		this.duracao = duracao;
 	}
-	public int getAnoLancamento() {
+	public Integer getAnoLancamento() {
 		return anoLancamento;
 	}
 	public void setAnoLancamento(int anoLancamento) {

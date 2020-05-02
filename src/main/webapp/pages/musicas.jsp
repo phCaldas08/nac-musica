@@ -22,7 +22,7 @@
 
 		<h1 style="margin-bottom: 50px">Musicas</h1>
 		<div class="toolbar">
-			<a class="btn btn-default">Nova musica</a>
+			<a class="btn btn-default" href="${contextPath}/musica/form?type=novo">Nova musica</a>
 		</div>
 		<table class="table table-striped">
 			<thead>
@@ -42,8 +42,8 @@
 						<td>
 							<div class="toolbar">
 								<form:form action="${contextPath}/musica/${musica.id}" method="delete">
-									<a class="btn btn-success">Editar</a>
-									<a class="btn btn-warning">Detalhe</a>
+									<a class="btn btn-success" href="${contextPath}/musica/form?type=editar&id=${musica.id}">Editar</a>
+									<a class="btn btn-warning" href="${contextPath}/musica/form?type=detalhe&id=${musica.id}">Detalhe</a>
 									<input type="submit" class="btn btn-danger" value="excluir">
 								</form:form>
 							</div>
