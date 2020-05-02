@@ -39,7 +39,7 @@
 				<h1>Editar Musica</h1>
 			</c:if>
 			</br> </br>
-			<form:form modelAttribute="musicaModel"
+			<form:form modelAttribute="musicaModel" action="${contextPath}/musica"
 				method="${tipo == 'novo' ? 'post' : 'put'}">
 				<form:input type="text" id="id" path="id" name="id"
 					style="display: none" />
@@ -74,6 +74,14 @@
 							type="number" id="duracao" path="duracao" name="duracao" />
 					</label>
 				</div>
+				
+				<c:if test="${tipo != 'detalhe'}">
+					<a class="btn btn-danger" href="${contextPath}/musica">Cancelar</a>
+					<input type="submit" value="Salvar" class="btn btn-success">
+				</c:if>
+				<c:if test="${tipo == 'detalhe'}">
+					<a class="btn btn-default" href="${contextPath}/musica">Voltar</a>
+				</c:if>
 			</form:form>
 		</div>
 	</div>
