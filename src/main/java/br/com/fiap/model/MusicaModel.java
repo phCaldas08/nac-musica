@@ -8,8 +8,9 @@ public class MusicaModel {
 	private String artista;
 	private Double duracao;
 	private Integer anoLancamento;
+	private String estilo;
 	
-	public MusicaModel(Integer id, String nome, String album, String artista, Double duracao, Integer anoLancamento) {
+	public MusicaModel(Integer id, String nome, String album, String artista, Double duracao, Integer anoLancamento, String estilo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -17,6 +18,7 @@ public class MusicaModel {
 		this.artista = artista;
 		this.duracao = duracao;
 		this.anoLancamento = anoLancamento;
+		this.estilo=estilo;
 	}
 	
 	public Integer getId() {
@@ -56,6 +58,11 @@ public class MusicaModel {
 		this.anoLancamento = anoLancamento;
 	}
 	
-	
+	public String getEstilo() {
+		return estilo;
+	}
 
+	public void setEstilo(String estilo) {
+		this.estilo = estilo;
+	}
 }
