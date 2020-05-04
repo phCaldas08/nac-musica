@@ -41,7 +41,7 @@ public class MusicaController {
 				model.addAttribute("musicaModel",MusicaRepository.getInstance().findById(id));
 				break;
 			case "novo":
-				model.addAttribute("musicaModel", new MusicaModel(0, "", "", "", 0.00, 2000));
+				model.addAttribute("musicaModel", new MusicaModel(0, "", "", "", 0.00, 2000,""));
 				break;
 			default:
 				page = "redirect:/musica";
