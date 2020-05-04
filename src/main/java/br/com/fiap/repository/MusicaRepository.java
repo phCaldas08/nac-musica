@@ -28,7 +28,8 @@ public class MusicaRepository {
 					"Xuxa so para baixinhos 2",
 					"Xuxa",
 					3.15,
-					1512
+					1512,
+					"pop"
 				));
 		
 		mapMusicas.put(2, new MusicaModel(
@@ -37,7 +38,8 @@ public class MusicaRepository {
 				"Xuxa so para baixinhos 4",
 				"Xuxa",
 				3.15,
-				1514
+				1514,
+				"pop"
 			));
 		
 		mapMusicas.put(3, new MusicaModel(
@@ -46,7 +48,8 @@ public class MusicaRepository {
 				"Xuxa so para baixinhos 7",
 				"Xuxa",
 				3.15,
-				1517
+				1517,
+				"pop"
 			));
 		
 		mapMusicas.put(4, new MusicaModel(
@@ -55,7 +58,8 @@ public class MusicaRepository {
 				"Xuxa so para baixinhos 5",
 				"Xuxa",
 				3.15,
-				1515
+				1515,
+				"pop"
 			));
 		
 		mapMusicas.put(5, new MusicaModel(
@@ -64,7 +68,8 @@ public class MusicaRepository {
 				"Xuxa so para baixinhos 2",
 				"Xuxa",
 				3.15,
-				1512
+				1512,
+				"pop"
 			));
 	}
 	
