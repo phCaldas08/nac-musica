@@ -39,42 +39,61 @@
 				<h1>Editar Musica</h1>
 			</c:if>
 			</br> </br>
-			<form:form modelAttribute="musicaModel" action="${contextPath}/musica"
+			<form:form modelAttribute="musicaModel"
+				action="${contextPath}/musica"
 				method="${tipo == 'novo' ? 'post' : 'put'}">
 				<form:input type="text" id="id" path="id" name="id"
 					style="display: none" />
 				<div class="form-group">
-					<label>Nome 
-					<form:input class="form-control" type="text" disabled="${tipo == 'detalhe'}"
-							id="nome" path="nome" name="nome" />
-					</label>
+					<label>Nome <form:input class="form-control" type="text"
+							disabled="${tipo == 'detalhe'}" id="nome" path="nome" name="nome" />
+					</label> 
+					<br/><font color="red"> <form:errors path="nome" />
+					</font><br />
 				</div>
 				<div class="form-group">
-					<label>Album 
-					<form:input class="form-control" type="text" disabled="${tipo == 'detalhe'}"
-							id="album" path="album" name="album" />
+					<label>Album <form:input class="form-control" type="text"
+							disabled="${tipo == 'detalhe'}" id="album" path="album"
+							name="album" />
 					</label>
+					<br/> <font color="red"> <form:errors path="album" />
+					</font><br />
 				</div>
 				<div class="form-group">
-					<label>Artista 
-					<form:input class="form-control" type="text" disabled="${tipo == 'detalhe'}"
-							id="artista" path="artista" name="artista" />
+					<label>Artista <form:input class="form-control" type="text"
+							disabled="${tipo == 'detalhe'}" id="artista" path="artista"
+							name="artista" />
+					</label> 
+					<br/>
+					<font color="red"> <form:errors path="artista" />
+					</font><br />
+				</div>
+
+				<div class="form-group">
+					<label>Estilo <form:input class="form-control"
+							disabled="${tipo == 'detalhe'}" type="text" id="estilo"
+							path="estilo" name="estilo" />
 					</label>
+					<br/> <font color="red"> <form:errors path="estilo" />
+					</font><br />
 				</div>
 				<div class="form-group">
-					<label>Ano de lancamento 
-					<form:input class="form-control" disabled="${tipo == 'detalhe'}"
-							type="number" id="anoLancamento" path="anoLancamento"
-							name="anoLancamento" />
+					<label>Ano de lancamento <form:input class="form-control"
+							disabled="${tipo == 'detalhe'}" type="number" id="anoLancamento"
+							path="anoLancamento" name="anoLancamento" />
 					</label>
+					<br/> <font color="red"> <form:errors path="anoLancamento" />
+					</font><br />
 				</div>
 				<div class="form-group">
-					<label>Duracao 
-					<form:input class="form-control" disabled="${tipo == 'detalhe'}"
-							type="number" id="duracao" path="duracao" name="duracao" />
-					</label>
+					<label>Duracao <form:input class="form-control"
+							disabled="${tipo == 'detalhe'}" type="number" id="duracao"
+							path="duracao" name="duracao" />
+					</label> 
+					<br/><font color="red"> <form:errors path="duracao" />
+					</font><br />
 				</div>
-				
+
 				<c:if test="${tipo != 'detalhe'}">
 					<a class="btn btn-danger" href="${contextPath}/musica">Cancelar</a>
 					<input type="submit" value="Salvar" class="btn btn-success">
