@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.fiap.model.MusicaModel;
 import br.com.fiap.repository.MusicaRepository;
@@ -53,22 +54,24 @@ public class MusicaController {
 	}
 	
 	@PutMapping()
-	public String putMusica(@ModelAttribute MusicaModel musicaModel) {
-		MusicaRepository.getInstance().update(musicaModel);		
+	public String putMusica(@ModelAttribute MusicaModel musicaModel, RedirectAttributes redirectAttributes) {
+		MusicaRepository.getInstance().update(musicaModel);
+		redirectAttributes.addFlashAttribute("messages", "Musica atualizada com sucesso!!!");		
 		return "redirect:/musica";
 	}
 	
 	@PostMapping()
-	public String postMusica(@ModelAttribute MusicaModel musicaModel) {
+	public String postMusica(@ModelAttribute MusicaModel musicaModel, RedirectAttributes redirectAttributes) {
 		MusicaRepository.getInstance().insert(musicaModel);		
+		redirectAttributes.addFlashAttribute("messages", "Musica cadastrada com sucesso!!!");		
 		return "redirect:/musica";
 	}
 	
 	
 	@DeleteMapping("/{id}")
-	public String deleteMusica(@PathVariable int id) {
+	public String deleteMusica(@PathVariable int id, RedirectAttributes redirectAttributes) {
 		MusicaRepository.getInstance().delete(id);
-		
+		redirectAttributes.addFlashAttribute("messages", "Musica excluida com sucesso!!!");
 		return "redirect:/musica";
 	}
 	

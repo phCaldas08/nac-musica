@@ -23,6 +23,11 @@
 		<h1 style="margin-bottom: 50px">Musicas</h1>
 		<div class="toolbar">
 			<a class="btn btn-default" href="${contextPath}/musica/form?type=novo">Nova musica</a>
+			
+			<c:if test="${not empty messages}">
+				<h3 class="alert alert-warning">${messages}</h3>
+			</c:if>
+			
 		</div>
 		<table class="table table-striped">
 			<thead>
